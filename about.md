@@ -2,14 +2,15 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+I'm a self taught indie developer. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Video games are my passion. I've been playing them since I was 3 years old and now I'm following my dream to make them.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[liwa.johnson@gmail.com](mailto:liwa.johnson@gmail.com)
