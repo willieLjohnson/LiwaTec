@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Up and Running!
-published: false
+published: true
 ---
 
 Low key dev blog for games and experiments
