@@ -1,10 +1,11 @@
 ---
 layout: post
-title: You're up and running!
+title: Up and Running!
+published: true
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+Low key dev blog for games and experiments
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+![_config.yml]({{ site.baseurl }}/images/wjdev.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+Check out my portfolio at (https://unii.herokuapp.com) for something more professional.
