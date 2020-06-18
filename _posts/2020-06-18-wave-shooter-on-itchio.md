@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Wave Shooter is now on Itch.io
 
