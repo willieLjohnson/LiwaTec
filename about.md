@@ -7,9 +7,9 @@ published: true
 
 I'm a self taught indie developer. 
 
-### More Information
+### Video games are my passion.
 
-Video games are my passion. I've been playing them since I was 3 years old and now I'm following my dream to make them.
+I've been playing them since I was 3 years old and now I'm following my dream to make them.
 
 ### Contact me
 
