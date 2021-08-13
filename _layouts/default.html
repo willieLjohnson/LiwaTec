@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>
+      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
+      site.description }}
+    </title>
 
     {% include meta.html %}
 
@@ -9,43 +12,80 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/style.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }} - {{ site.description }}"
+      href="{{ site.baseurl }}/feed.xml"
+    />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="{{ site.baseurl }}/" class="site-avatar"
+          ><img src="{{ site.avatar }}"
+        /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+        <div class="site-info">
+          <h1 class="site-name">
+            <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+          </h1>
+          <p class="site-description">{{ site.description }}</p>
+        </div>
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a
+              role="button"
+              class="navbar-burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
           </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="{{ site.baseurl }}/index">Home</a>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+              <a href="{{ site.baseurl }}/blog">Blog</a>
+              <a href="{{ site.baseurl }}/about">About</a>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
+    <section class="section">
+      <div id="main" role="main" class="container">{{ content }}</div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
+      <footer class="footer">
+        <div class="content has-text-centered">
           {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
+          <p>
+            <strong>LiwaTec Software Company</strong> Founded by
+            <a href="https://jgthms.com">Willie Johnson</a>. The source code is
+            licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            The website content is licensed
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY NC SA 4.0</a
+            >.
+          </p>
+        </div>
+      </footer>
+      {% include analytics.html %}
+    </section>
   </body>
 </html>
