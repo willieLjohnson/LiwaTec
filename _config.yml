@@ -38,9 +38,11 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
+# domain: willieljohnson.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://unii.herokuapp.com/
+url: https://willieljohnson.github.io/LiwaTec/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
