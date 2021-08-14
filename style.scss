@@ -7,20 +7,26 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
 @import 'reset';
 @import 'variables';
-// Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
 /**************/
 
-// html {
-//   font-size: 100%;
-// }
+$blue-1: #bbcae5;
+$blue-2: #718ccf;
+$blue-3: #4a67be;
+$blue-4: #304dab;
+$blue-5: #071b91;
+
+$yellow: yellow;
+
+html {
+  background: $blue-4;
+}
 
 body {
-  background: $white;
   font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  color: $blue-1;
 }
 
 .container {
@@ -37,7 +43,7 @@ h4,
 h5,
 h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $blue-1;
   font-weight: bold;
 
   line-height: 1.7;
@@ -66,7 +72,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: $blue-1;
 }
 
 p {
@@ -74,7 +80,7 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $yellow;
   text-decoration: none;
   cursor: pointer;
   &:hover,
@@ -130,17 +136,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $blue-1;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $yellow;
+  background: $blue-5;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $yellow;
+  background: $blue-5;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -205,7 +211,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $blue-1;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -215,7 +221,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $blue-1;
   font-size: 16px;
 
   @include mobile {
@@ -238,7 +244,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $yellow;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -252,6 +258,14 @@ nav {
 
 //
 // .main
+//
+.hero {
+  background-color: $yellow;
+  color: $blue-5;
+}
+
+//
+// .blog
 //
 
 .posts > .post {
@@ -284,16 +298,14 @@ nav {
   }
 }
 
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+footer strong {
+  color: $white;
 }
 
 footer {
   padding: 20px !important;
   text-align: center;
+  background-color: transparent !important;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
