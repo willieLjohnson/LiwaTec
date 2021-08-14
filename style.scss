@@ -4,9 +4,11 @@
 //
 // IMPORTS
 //
+
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
 @import 'reset';
 @import 'variables';
+@import 'fonts';
 
 /**************/
 /* BASE RULES */
@@ -25,17 +27,22 @@ $form-control-background: rgba(48, 77, 171, 0.8);
 
 $yellow: yellow;
 
-$base-font-family: Verdana, Geneva, Tahoma, sans-serif;
+$header-font-family: 'robotolight', 'Gill Sans', 'Gill Sans MT', Calibri,
+  'Trebuchet MS', sans-serif;
+$base-font-family: 'droid_serifregular', Georgia, serif;
 
-html {
-  background: $blue-4;
-
-  background-image: radial-gradient($blue-1 1px, transparent 0);
-  background-size: 40px 40px;
+.dotted-background {
+  background-image: radial-gradient($blue-1 0.5px, transparent 0);
+  background-size: 20px 20px;
   background-position: -20px -20px;
 }
 
+html {
+  background: $blue-4;
+}
+
 body {
+  @extend .dotted-background;
   font-family: $base-font-family;
   color: $blue-1;
 
@@ -58,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $base-font-family;
+  font-family: $header-font-family;
   color: $blue-1;
   font-weight: bold;
 
@@ -185,14 +192,15 @@ img {
 // .masthead
 //
 
+.site-name a {
+  font-family: $header-font-family;
+}
+
 .wrapper-masthead {
   margin-bottom: 0px;
 }
 
 .masthead {
-  border-bottom: 2px solid $blue-2;
-  border-right: 2px solid $blue-2;
-  border-left: 2px solid $blue-2;
   padding: 20px;
 
   @include mobile {
@@ -202,9 +210,9 @@ img {
 
 .site-avatar {
   float: left;
+  margin-right: 20px;
   width: 70px;
   height: 70px;
-  margin-right: 15px;
 
   @include mobile {
     float: none;
