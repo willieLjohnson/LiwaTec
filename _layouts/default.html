@@ -28,10 +28,11 @@
   </head>
 
   <body>
-    <div class="container">{% include header.html %}</div>
-    <section class="section">
-      <div id="main" role="main" class="container">{{ content }}</div>
-      {% include footer.html %} {% include analytics.html %}
-    </section>
+    <div class="container wrapper-masthead">{% include header.html %}</div>
+    <div class="container">
+      <section class="section">{{ content }}</section>
+    </div>
+    <div class="container">{% include footer.html %}</div>
+    {% include analytics.html %}
   </body>
 </html>

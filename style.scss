@@ -18,18 +18,30 @@ $blue-3: #4a67be;
 $blue-4: #304dab;
 $blue-5: #071b91;
 
+$header-background: rgba(48, 77, 171, 0.8);
+$product-background: rgba(74, 103, 190, 0.5);
+$form-background: rgba(74, 103, 190, 0.9);
+$form-control-background: rgba(48, 77, 171, 0.8);
+
 $yellow: yellow;
+
+$base-font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 html {
   background: $blue-4;
 }
 
 body {
-  font: 18px/1.4 $helvetica;
+  font-family: $base-font-family;
   color: $blue-1;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .container {
+  flex: 1;
   margin: 0 auto;
   max-width: 740px;
   padding: 0 10px;
@@ -42,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $helveticaNeue;
+  font-family: $base-font-family;
   color: $blue-1;
   font-weight: bold;
 
@@ -174,8 +186,10 @@ img {
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid $blue-2;
+  border-right: 2px solid $blue-2;
+  border-left: 2px solid $blue-2;
+  padding: 20px;
 
   @include mobile {
     text-align: center;
@@ -213,7 +227,7 @@ img {
   margin: 0;
   color: $blue-1;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $base-font-family;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -230,9 +244,10 @@ img {
 }
 
 nav {
+  background-color: transparent !important;
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $base-font-family;
   font-size: 18px;
 
   @include mobile {
@@ -244,7 +259,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $yellow;
+    color: $blue-1;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
