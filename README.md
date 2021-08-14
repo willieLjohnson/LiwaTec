@@ -1,3 +1,1 @@
-# willieljohnson.github.io
-
-Link to website: https://willieljohnson.github.io/
+# LiwaTec Software Company
