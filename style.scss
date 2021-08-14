@@ -29,6 +29,10 @@ $base-font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 html {
   background: $blue-4;
+
+  background-image: radial-gradient($blue-1 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -20px -20px;
 }
 
 body {
@@ -182,7 +186,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .masthead {
@@ -213,6 +217,9 @@ img {
   }
 }
 
+.navbar-burger {
+  color: $blue-1 !important;
+}
 .site-info {
   float: left;
 
@@ -257,17 +264,29 @@ nav {
     font-size: 16px;
   }
 
-  a {
+  .navbar-item {
     margin-left: 20px;
     color: $blue-1;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
+    transition: all 0.25s ease-in-out, font-size 0.25s ease-in-out;
 
     @include mobile {
       margin: 0 10px;
       color: $blue;
     }
+  }
+
+  .navbar-item:hover {
+    cursor: pointer;
+    color: $blue-5;
+    font-size: 20px;
+    background-color: $yellow;
+  }
+
+  .navbar-item:active {
+    cursor: pointer;
   }
 }
 
@@ -275,7 +294,7 @@ nav {
 // .main
 //
 .hero {
-  background-color: $yellow;
+  background: $yellow;
   color: $blue-5;
 }
 
