@@ -1,10 +1,20 @@
-
 //
 // VARIABLES
 //
 
 // Colors
-$blue: #4183C4;
+$blue-1: #bbcae5;
+$blue-2: #718ccf;
+$blue-3: #4a67be;
+$blue-4: #304dab;
+$blue-5: #071b91;
+
+$header-background: rgba(74, 103, 190, 0.5);
+
+$yellow: yellow;
+
+$header-font-family: Verdana, sans-serif;
+$base-font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 
 // Grays
 $black: #000;
@@ -13,11 +23,6 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
-
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
