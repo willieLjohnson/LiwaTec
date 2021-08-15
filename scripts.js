@@ -1,11 +1,29 @@
 import anime from './js/anime.es.js';
 
 window.onload = (event) => {
-  document.getElementById('site-avatar').onmouseenter = onAvatarOnHover;
-  document.getElementById('site-avatar').onmouseleave = onAvatarOffHover;
+  document
+    .getElementById('site-avatar')
+    .addEventListener('mouseenter', (event) => {
+      onAvatarMouseEnter();
+    });
+  document
+    .getElementById('site-avatar')
+    .addEventListener('mouseleave', (event) => {
+      onAvatarMouseLeave();
+    });
+
+  var navBarItems = document.getElementsByClassName('navbar-item');
+  [].forEach.call(navBarItems, function (item) {
+    item.addEventListener('mouseenter', (event) => {
+      onNavBarItemMouseEnter(event.target);
+    });
+    item.addEventListener('mouseleave', (event) => {
+      onNavBarItemMouseLeave(event.target);
+    });
+  });
 };
 
-function onAvatarOnHover() {
+function onAvatarMouseEnter() {
   var siteAvatar = document.getElementById('site-avatar');
   if (!siteAvatar.classList.contains('hovering')) {
     siteAvatar.classList.add('hovering');
@@ -27,7 +45,7 @@ function onAvatarOnHover() {
   });
 }
 
-function onAvatarOffHover() {
+function onAvatarMouseLeave() {
   var siteAvatar = document.getElementById('site-avatar');
 
   if (siteAvatar.classList.contains('hovering')) {
@@ -49,5 +67,35 @@ function onAvatarOffHover() {
     },
 
     delay: 25,
+  });
+}
+
+function onNavBarItemMouseEnter(target) {
+  anime({
+    targets: target,
+    scale: {
+      value: 1.1,
+      duration: 50,
+      easing: 'easeOutElastic(1, .1)',
+    },
+    borderRadius: {
+      value: 2,
+      duration: 50,
+    },
+  });
+}
+
+function onNavBarItemMouseLeave(target) {
+  anime({
+    targets: target,
+    scale: {
+      value: 1,
+      duration: 50,
+      easing: 'easeOutElastic(1, .1)',
+    },
+    borderRadius: {
+      value: 0,
+      duration: 50,
+    },
   });
 }

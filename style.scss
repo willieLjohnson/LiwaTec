@@ -21,6 +21,11 @@
   background-position: -20px -20px;
 }
 
+.thin-line-border {
+  border: 0.1px solid adjust-color($neutralLighter, $alpha: -0.8);
+  border-radius: 5px;
+}
+
 html {
   background: $primary;
 }
@@ -91,10 +96,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s ease-out;
-  &:hover,
-  &:active {
-    color: $accent;
-  }
 }
 
 ul,
@@ -188,8 +189,10 @@ img {
 }
 
 .masthead {
+  @extend .thin-line-border;
   padding: 20px;
-  background-color: $primary;
+  background-color: adjust-color($primary, $alpha: -0.2);
+  backdrop-filter: blur(1px);
 
   @include mobile {
     text-align: center;
@@ -266,23 +269,23 @@ nav {
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-    transition: all 0.25s ease-in-out, font-size 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 
     @include mobile {
       margin: 0 10px;
       color: $secondaryDark;
     }
-  }
 
-  .navbar-item:hover {
-    cursor: pointer;
-    color: $accent;
-    font-size: 20px;
-    background-color: $accent;
-  }
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+      background-color: $accent;
+      box-shadow: 0 0 10px $accentLight;
+    }
 
-  .navbar-item:active {
-    cursor: pointer;
+    &:active {
+      cursor: pointer;
+    }
   }
 }
 
@@ -290,8 +293,9 @@ nav {
 // .main
 //
 .hero {
-  background: $primary;
-
+  @extend .thin-line-border;
+  background: adjust-color($primary, $alpha: -0.2);
+  backdrop-filter: blur(1px);
   button:hover {
     animation: pulse 2s both infinite;
   }
@@ -359,8 +363,10 @@ footer strong {
 }
 
 footer {
+  @extend .thin-line-border;
   padding: 20px !important;
   background-color: $primary !important;
+  backdrop-filter: blur(1px);
 }
 
 .footer-contacts {
