@@ -16,19 +16,19 @@
 /**************/
 
 .dotted-background {
-  background-image: radial-gradient($blue-1 0.5px, transparent 0);
+  background-image: radial-gradient($neutralLighter 0.5px, transparent 0);
   background-size: 20px 20px;
   background-position: -20px -20px;
 }
 
 html {
-  background: $blue-4;
+  background: $primary;
 }
 
 body {
   @extend .dotted-background;
   font-family: $base-font-family;
-  color: $blue-1;
+  color: $neutralLighter;
 
   display: flex;
   min-height: 100vh;
@@ -50,7 +50,7 @@ h4,
 h5,
 h6 {
   font-family: $header-font-family;
-  color: white;
+  color: $neutralLighter;
   font-weight: bold;
 
   line-height: 1.7;
@@ -79,7 +79,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $blue-1;
+  color: $neutralLighter;
 }
 
 p {
@@ -87,13 +87,13 @@ p {
 }
 
 a {
-  color: $yellow;
+  color: $accent;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s ease-out;
   &:hover,
   &:active {
-    color: $yellow;
+    color: $accent;
   }
 }
 
@@ -144,17 +144,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $blue-1;
+  color: $neutralLighter;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $yellow;
-  background: $blue-5;
+  color: $accent;
+  background: $secondaryDark;
 }
 ::selection {
-  color: $yellow;
-  background: $blue-5;
+  color: $accent;
+  background: $secondaryDark;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -189,7 +189,7 @@ img {
 
 .masthead {
   padding: 20px;
-  background-color: $header-background;
+  background-color: $primary;
 
   @include mobile {
     text-align: center;
@@ -214,7 +214,7 @@ img {
 }
 
 .navbar-burger {
-  color: $blue-1 !important;
+  color: $neutralLighter !important;
 }
 .site-info {
   float: left;
@@ -228,7 +228,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $blue-1;
+  color: $neutralLighter;
   cursor: pointer;
   font-family: $base-font-family;
   font-weight: 300;
@@ -238,7 +238,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $blue-1;
+  color: $neutralLighter;
   font-size: 16px;
 
   @include mobile {
@@ -262,7 +262,7 @@ nav {
 
   .navbar-item {
     margin-left: 20px;
-    color: $blue-1;
+    color: $neutralLighter;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -270,15 +270,15 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue-5;
+      color: $secondaryDark;
     }
   }
 
   .navbar-item:hover {
     cursor: pointer;
-    color: $yellow;
+    color: $accent;
     font-size: 20px;
-    background-color: $yellow;
+    background-color: $accent;
   }
 
   .navbar-item:active {
@@ -290,20 +290,38 @@ nav {
 // .main
 //
 .hero {
-  background: $yellow;
-  color: $blue-5;
+  background: $primary;
 
-  &:hover {
+  button:hover {
     animation: pulse 2s both infinite;
   }
+
+  p {
+    color: $neutralLighter;
+  }
 }
+//
+// .about
+//
+.about {
+  background-color: $primary;
+  padding: 2em;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 //
 // .blog
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  background-color: $primary;
+  padding: 2em;
+  border-bottom: 1px solid $neutralDark;
 }
 
 .posts > .post:last-child {
@@ -312,11 +330,16 @@ nav {
 }
 
 .post {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+  background-color: $primary;
   blockquote {
     margin: 1.8em 0.8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid $neutralDark;
     padding: 0.1em 1em;
-    color: $gray;
+    color: $neutralDark;
     font-size: 22px;
     font-style: italic;
   }
@@ -332,22 +355,22 @@ nav {
 }
 
 footer strong {
-  color: $white;
+  color: $neutralLighter;
 }
 
 footer {
   padding: 20px !important;
-  background-color: transparent !important;
+  background-color: $primary !important;
 }
 
 .footer-contacts {
-  margin: 0px 40px 0px 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   a {
-    color: $yellow !important;
+    color: $accent !important;
     padding: 0px 10px 0px 10px;
   }
 }

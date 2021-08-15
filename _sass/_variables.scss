@@ -3,26 +3,44 @@
 //
 
 // Colors
-$blue-1: #bbcae5;
-$blue-2: #718ccf;
-$blue-3: #4a67be;
-$blue-4: #304dab;
-$blue-5: #071b91;
+$vivid-sky-blue: hsla(195, 100%, 60%, 1);
+$cyan-process: hsla(196, 100%, 44%, 1);
+$cornflower-blue: hsla(226, 76%, 74%, 1);
+$orchid-crayola: hsla(315, 72%, 77%, 1);
+$pink-lace: hsla(316, 96%, 90%, 1);
+$prussian-blue: hsla(208, 42%, 19%, 1);
+$rosso-corsa: hsla(0, 100%, 41%, 1);
+$selective-yellow: hsla(43, 100%, 52%, 1);
 
-$header-background: rgba(74, 103, 190, 0.5);
+$spanish-gray: hsla(0, 0%, 60%, 1);
+$sonic-silver: hsla(0, 0%, 44%, 1);
+$gray-x-11-gray: hsla(0, 0%, 74%, 1);
+$silver: hsla(0, 0%, 77%, 1);
+$platinum: hsla(0, 0%, 90%, 1);
+$jet: hsla(0, 0%, 19%, 1);
+$dim-gray: hsla(0, 0%, 41%, 1);
+$battleship-grey: hsla(0, 0%, 52%, 1);
 
-$yellow: yellow;
+$primary: $prussian-blue;
+$primaryLight: tint($primary, 20%);
+$primaryDark: shade($primary, 20%);
+
+$secondary: $cyan-process;
+$secondaryLight: $vivid-sky-blue;
+$secondaryDark: $cornflower-blue;
+
+$accent: $selective-yellow;
+$accentLight: $selective-yellow;
+$accentDark: $selective-yellow;
+
+$neutralDarker: $jet;
+$neutralDark: $dim-gray;
+$neutral: $sonic-silver;
+$neutralLight: $silver;
+$neutralLighter: $platinum;
 
 $header-font-family: Verdana, sans-serif;
 $base-font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
 
 // Mobile breakpoints
 @mixin mobile {
