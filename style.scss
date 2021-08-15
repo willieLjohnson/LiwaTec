@@ -22,8 +22,13 @@
 }
 
 .thin-line-border {
-  border: 0.1px solid adjust-color($neutralLighter, $alpha: -0.8);
+  border: 0.5px solid adjust-color($neutralLighter, $alpha: -0.8);
   border-radius: 5px;
+}
+
+.transparent-blur-background {
+  background: adjust-color($primary, $alpha: -0.4) !important;
+  backdrop-filter: blur(1px);
 }
 
 html {
@@ -181,18 +186,15 @@ img {
 .site-name {
   a {
     font-family: $header-font-family;
+    &:hover {
+      color: $accent;
+    }
   }
 }
 
-.wrapper-masthead {
-  margin-bottom: 0px;
-}
-
-.masthead {
-  @extend .thin-line-border;
+.header {
+  @extend .thin-line-border, .transparent-blur-background;
   padding: 20px;
-  background-color: adjust-color($primary, $alpha: -0.2);
-  backdrop-filter: blur(1px);
 
   @include mobile {
     text-align: center;
@@ -293,9 +295,7 @@ nav {
 // .main
 //
 .hero {
-  @extend .thin-line-border;
-  background: adjust-color($primary, $alpha: -0.2);
-  backdrop-filter: blur(1px);
+  @extend .thin-line-border, .transparent-blur-background;
   button:hover {
     animation: pulse 2s both infinite;
   }
@@ -308,7 +308,8 @@ nav {
 // .about
 //
 .about {
-  background-color: $primary;
+  @extend .thin-line-border, .transparent-blur-background;
+
   padding: 2em;
   height: 100%;
   display: flex;
@@ -321,24 +322,34 @@ nav {
 //
 // .blog
 //
+.posts {
+  @extend .thin-line-border, .transparent-blur-background;
+  padding: 1em;
 
-.posts > .post {
-  background-color: $primary;
-  padding: 2em;
-  border-bottom: 1px solid $neutralDark;
+  .thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+    border-bottom: 0.1px solid adjust-color($neutralLighter, $alpha: -0.9);
+    &:last-child {
+      border-bottom: none;
+    }
+    img {
+      width: 500px;
+      height: 500px;
+    }
+  }
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
+article {
+  @extend .thin-line-border, .transparent-blur-background;
 
-.post {
   display: flex;
   flex-direction: column;
   padding: 2em;
   justify-content: center;
-  background-color: $primary;
   blockquote {
     margin: 1.8em 0.8em;
     border-left: 2px solid $neutralDark;
@@ -363,10 +374,8 @@ footer strong {
 }
 
 footer {
-  @extend .thin-line-border;
+  @extend .thin-line-border, .transparent-blur-background;
   padding: 20px !important;
-  background-color: $primary !important;
-  backdrop-filter: blur(1px);
 }
 
 .footer-contacts {
