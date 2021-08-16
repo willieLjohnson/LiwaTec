@@ -46,6 +46,13 @@ body {
 }
 section {
   padding: 2em !important;
+  &#content {
+    padding: 1em !important;
+
+    @include mobile {
+      padding: 0em !important;
+    }
+  }
 }
 
 .container {
@@ -299,6 +306,10 @@ nav {
 //
 // .main
 //
+#content {
+  padding: 1em !important;
+}
+
 .home {
   .hero {
     @extend .thin-line-border, .transparent-blur-background;

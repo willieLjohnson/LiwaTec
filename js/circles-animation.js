@@ -2,7 +2,7 @@ import anime from './anime.es.js';
 
 window.human = false;
 
-var canvasEl = document.querySelector('.fireworks');
+var canvasEl = document.querySelector('.animated');
 var ctx = canvasEl.getContext('2d');
 var pointerX = 0;
 var pointerY = 0;
