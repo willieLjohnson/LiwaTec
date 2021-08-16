@@ -5,25 +5,22 @@ layout: default
 <div class="home">
   <section class="hero is-halfheight">
     <div class="hero-body">
-      <div class="">
+      <div class="container has-text-centered">
         <p class="title">Medium hero</p>
         <p class="subtitle">Medium subtitle</p>
       </div>
     </div>
   </section>
-  <section class="posts-section">
-    <div class="posts">
-      {% for post in site.posts %}
-      <div class="thumbnail">
-        <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
 
-        <p class="entry">{{ post.excerpt }}</p>
+  <div class="posts">
+    {% for post in site.posts %}
+    <div class="thumbnail">
+      <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
 
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"
-          >Read More</a
-        >
-      </div>
-      {% endfor %}
+      <p class="entry">{{ post.excerpt }}</p>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </div>
-  </section>
+    {% endfor %}
+  </div>
 </div>

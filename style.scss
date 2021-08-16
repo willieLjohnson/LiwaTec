@@ -44,6 +44,9 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+section {
+  padding: 2em !important;
+}
 
 .container {
   flex: 1;
@@ -143,6 +146,11 @@ img {
   max-width: 100%;
 }
 
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -189,15 +197,6 @@ img {
     &:hover {
       color: $accent;
     }
-  }
-}
-
-.header {
-  @extend .thin-line-border, .transparent-blur-background;
-  padding: 20px;
-
-  @include mobile {
-    text-align: center;
   }
 }
 
@@ -252,9 +251,14 @@ img {
 }
 
 nav {
-  background-color: transparent !important;
+  @extend .thin-line-border, .transparent-blur-background;
+  padding: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+
   font-family: $base-font-family;
   font-size: 25px;
 
@@ -263,6 +267,7 @@ nav {
     margin-top: 9px;
     display: block;
     font-size: 16px;
+    text-align: center;
   }
 
   .navbar-item {
@@ -294,20 +299,22 @@ nav {
 //
 // .main
 //
-.hero {
-  @extend .thin-line-border, .transparent-blur-background;
-  button:hover {
-    animation: pulse 2s both infinite;
+.home {
+  .hero {
+    @extend .thin-line-border, .transparent-blur-background;
+    button:hover {
+      animation: pulse 2s both infinite;
+    }
+
+    p {
+      color: $neutralLighter;
+    }
+    border-bottom: none;
   }
 
-  p {
-    color: $neutralLighter;
+  .posts {
+    border-top: none;
   }
-  border-bottom: none;
-}
-
-.posts-section {
-  border-top: none;
 }
 
 //

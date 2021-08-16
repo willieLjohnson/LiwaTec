@@ -23,42 +23,38 @@
     }
   });
 </script>
-<header class="header clearfix">
-  <a href="{{ site.baseurl }}/" class="site-avatar" id="site-avatar"
-    ><img src="{{ site.baseurl }}/images/liwatec-logo-square.png"
-  /></a>
-
-  <div class="site-info">
-    <h1 class="site-name">
-      <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-    </h1>
-    <p class="site-description">The Future of Design and Technology</p>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a href="{{ site.baseurl }}/" class="site-avatar" id="site-avatar"
+      ><img src="{{ site.baseurl }}/images/liwatec-logo-square.png"
+    /></a>
+    <div class="site-info">
+      <h1 class="site-name">
+        <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+      </h1>
+      <p class="site-description">The Future of Design and Technology</p>
+    </div>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navMenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navMenu"
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-end">
+      <a id="home" class="navbar-item" href="{{ site.baseurl }}/">Home</a>
+
+      <a id="blog" class="navbar-item" href="{{ site.baseurl }}/blog">Blog</a>
+      <a id="about" class="navbar-item" href="{{ site.baseurl }}/about"
+        >About</a
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
     </div>
-
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-start">
-        <a id="home" class="navbar-item" href="{{ site.baseurl }}/">Home</a>
-
-        <a id="blog" class="navbar-item" href="{{ site.baseurl }}/blog">Blog</a>
-        <a id="about" class="navbar-item" href="{{ site.baseurl }}/about"
-          >About</a
-        >
-      </div>
-    </div>
-  </nav>
-</header>
+  </div>
+</nav>
