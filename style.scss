@@ -303,7 +303,13 @@ nav {
   p {
     color: $neutralLighter;
   }
+  border-bottom: none;
 }
+
+.posts-section {
+  border-top: none;
+}
+
 //
 // .about
 //
@@ -337,8 +343,8 @@ nav {
       border-bottom: none;
     }
     img {
-      width: 500px;
-      height: 500px;
+      width: 300px;
+      height: 300px;
     }
   }
 }
