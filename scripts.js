@@ -11,16 +11,6 @@ window.onload = (event) => {
     .addEventListener('mouseleave', (event) => {
       onAvatarMouseLeave();
     });
-
-  var navBarItems = document.getElementsByClassName('navbar-item');
-  [].forEach.call(navBarItems, function (item) {
-    item.addEventListener('mouseenter', (event) => {
-      onNavBarItemMouseEnter(event.target);
-    });
-    item.addEventListener('mouseleave', (event) => {
-      onNavBarItemMouseLeave(event.target);
-    });
-  });
 };
 
 function onAvatarMouseEnter() {
@@ -67,35 +57,5 @@ function onAvatarMouseLeave() {
     },
 
     delay: 25,
-  });
-}
-
-function onNavBarItemMouseEnter(target) {
-  anime({
-    targets: target,
-    scale: {
-      value: 1.1,
-      duration: 50,
-      easing: 'easeOutElastic(1, .1)',
-    },
-    borderRadius: {
-      value: 2,
-      duration: 50,
-    },
-  });
-}
-
-function onNavBarItemMouseLeave(target) {
-  anime({
-    targets: target,
-    scale: {
-      value: 1,
-      duration: 50,
-      easing: 'easeOutElastic(1, .1)',
-    },
-    borderRadius: {
-      value: 0,
-      duration: 50,
-    },
   });
 }

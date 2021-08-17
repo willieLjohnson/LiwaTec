@@ -3,14 +3,17 @@
 //
 
 // Colors
-$vivid-sky-blue: hsla(195, 100%, 60%, 1);
-$cyan-process: hsla(196, 100%, 44%, 1);
-$cornflower-blue: hsla(226, 76%, 74%, 1);
-$orchid-crayola: hsla(315, 72%, 77%, 1);
-$pink-lace: hsla(316, 96%, 90%, 1);
-$prussian-blue: hsla(208, 42%, 19%, 1);
-$rosso-corsa: hsla(0, 100%, 41%, 1);
-$selective-yellow: hsla(43, 100%, 52%, 1);
+$vivid-sky-blue: #32cbffff;
+$cyan-process: #00a5e0ff;
+
+$sizzling-red: #ff5a5fff;
+$rosso-corsa: #d00000ff;
+
+$earth-yellow: #d7af70;
+$prussian-blue: #1c3144ff;
+$oxford-blue: #001b2eff;
+
+$selective-yellow: #ffba08ff;
 
 $spanish-gray: hsla(0, 0%, 60%, 1);
 $sonic-silver: hsla(0, 0%, 44%, 1);
@@ -22,16 +25,16 @@ $dim-gray: hsla(0, 0%, 41%, 1);
 $battleship-grey: hsla(0, 0%, 52%, 1);
 
 $primary: $prussian-blue;
-$primaryLight: tint($primary, 20%);
-$primaryDark: shade($primary, 20%);
+$primaryLight: $earth-yellow;
+$primaryDark: $oxford-blue;
 
 $secondary: $cyan-process;
 $secondaryLight: $vivid-sky-blue;
-$secondaryDark: $cornflower-blue;
+$secondaryDark: $jet;
 
 $accent: $selective-yellow;
-$accentLight: $selective-yellow;
-$accentDark: $selective-yellow;
+$accentLight: $sizzling-red;
+$accentDark: $rosso-corsa;
 
 $neutralDarker: $jet;
 $neutralDark: $dim-gray;

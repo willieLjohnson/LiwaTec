@@ -36,13 +36,13 @@
       href="{{ site.baseurl }}/feed.xml"
     />
     <script type="module" src="{{ site.baseurl }}/scripts.js"></script>
-    <script
+    <!-- <script
       type="module"
       src="{{ site.baseurl }}/js/circles-animation.js"
-    ></script>
+    ></script> -->
   </head>
 
-  <body>
+  <body id="default-body">
     <canvas class="animated"> </canvas>
     {% include header.html %}
     <section class="section" id="content">{{ content }}</section>
