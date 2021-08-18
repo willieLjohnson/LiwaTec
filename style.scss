@@ -21,13 +21,30 @@
   background-position: -20px -20px;
 }
 
+.radial-background {
+  background-image: radial-gradient(
+      circle at center center,
+      $neutralDarker,
+      $transparentNeutralDarker
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      $transparentNeutralDarker,
+      $transparentNeutralDarker,
+      20px,
+      transparent 40px,
+      transparent 20px
+    );
+  background-blend-mode: multiply;
+}
+
 .thin-line-border {
   border: 0.5px solid adjust-color($neutralLighter, $alpha: -0.8);
   border-radius: 5px;
 }
 
 .transparent-blur-background {
-  background: adjust-color($neutralDarker, $alpha: -0.6) !important;
+  background-color: adjust-color($transparentNeutralDarker, $alpha: -0.6);
   backdrop-filter: blur(2px);
 }
 
@@ -49,7 +66,6 @@ body {
 }
 
 section {
-  padding: 1em 0em 1em 0em;
   &#content {
     padding: 1em 0em 1em 0em;
 
@@ -111,7 +127,7 @@ p {
 }
 
 a {
-  color: $accent;
+  color: $accentLight;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s ease-out;
@@ -174,11 +190,11 @@ canvas {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $accent;
+  color: $accentLight;
   background: $neutralDarker;
 }
 ::selection {
-  color: $accent;
+  color: $accentLight;
   background: $neutralDarker;
 }
 
@@ -206,7 +222,7 @@ canvas {
   a {
     font-family: $header-font-family;
     &:hover {
-      color: $accent;
+      color: $accentLight;
     }
   }
 }
@@ -261,7 +277,7 @@ canvas {
   }
 }
 
-nav {
+#header {
   @extend .thin-line-border, .transparent-blur-background;
   padding: 20px;
   border-top: none;
@@ -299,7 +315,7 @@ nav {
     &:hover {
       cursor: pointer;
       color: $primary;
-      background-color: $accent;
+      background-color: $accentLight;
       box-shadow: 0 0 10px $accentLight;
     }
 
@@ -314,7 +330,9 @@ nav {
 //
 .home {
   .hero {
-    @extend .thin-line-border, .transparent-blur-background;
+    @extend .thin-line-border, .transparent-blur-background, .radial-background;
+
+    overflow-y: hidden;
     button:hover {
       animation: pulse 2s both infinite;
     }
@@ -322,10 +340,17 @@ nav {
     p {
       color: $neutralLighter;
     }
-  }
 
-  .posts {
-    border-top: none;
+    img {
+      position: absolute;
+      width: 100%;
+      top: -50%;
+      z-index: -5;
+      filter: brightness(80%) grayscale(100%);
+      opacity: 0.5;
+    }
+
+    margin-bottom: 0.5em;
   }
 }
 
@@ -394,11 +419,11 @@ article {
   }
 }
 
-footer strong {
+#footer strong {
   color: $neutralLighter;
 }
 
-footer {
+#footer {
   @extend .thin-line-border, .transparent-blur-background;
   padding: 20px !important;
 }
@@ -410,7 +435,7 @@ footer {
   justify-content: center;
 
   a {
-    color: $accent !important;
+    color: $accentLight !important;
     padding: 0px 10px 0px 10px;
   }
 }
