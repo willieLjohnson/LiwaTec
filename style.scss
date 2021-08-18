@@ -130,7 +130,11 @@ a {
   color: $accentLight;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s ease-out;
+  transition: all 0.1s;
+  &:hover {
+    color: $accent;
+    font-size: 1.05em;
+  }
 }
 
 ul,
@@ -219,10 +223,11 @@ canvas {
 //
 
 .site-name {
-  a {
+  #site-anchor {
     font-family: $header-font-family;
+    transition: all 0.25s ease-out;
     &:hover {
-      color: $accentLight;
+      color: $accent;
     }
   }
 }
@@ -317,6 +322,7 @@ canvas {
       color: $primary;
       background-color: $accentLight;
       box-shadow: 0 0 10px $accentLight;
+      font-size: 1.1em;
     }
 
     &:active {
@@ -333,9 +339,6 @@ canvas {
     @extend .thin-line-border, .transparent-blur-background, .radial-background;
 
     overflow-y: hidden;
-    button:hover {
-      animation: pulse 2s both infinite;
-    }
 
     p {
       color: $neutralLighter;
@@ -348,6 +351,18 @@ canvas {
       z-index: -5;
       filter: brightness(80%) grayscale(100%);
       opacity: 0.5;
+    }
+
+    button {
+      background-color: $accentLight;
+      color: $neutralDarker;
+      border: none;
+      animation: shadow-pulse 2s both infinite;
+      transition: all 0.25s ease-out;
+      &:hover {
+        background-color: $accent;
+        font-size: 1.2em;
+      }
     }
 
     margin-bottom: 0.5em;
@@ -437,5 +452,91 @@ article {
   a {
     color: $accentLight !important;
     padding: 0px 10px 0px 10px;
+  }
+}
+
+//
+// Contact
+//
+.contact {
+  @extend .thin-line-border, .transparent-blur-background;
+  padding: 2em;
+
+  #contact-header {
+    text-align: center;
+  }
+
+  #contact-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    #contact-location {
+      border-radius: 10px;
+      border-style: none;
+      overflow: visible;
+      min-height: 500px;
+      margin: 2em 0em 2em 2em;
+
+      width: 50%;
+      height: 100%;
+      margin-bottom: 10px;
+      filter: grayscale(100%) contrast(100%);
+
+      @include mobile {
+        width: 90%;
+        margin: 2em 1em 2em 2em;
+      }
+    }
+  }
+
+  #contact-form {
+    width: 50%;
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  label {
+    color: $neutralLight;
+  }
+
+  input {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+    &::placeholder {
+      color: $neutral;
+    }
+  }
+
+  textarea {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+  }
+
+  select {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+  }
+
+  #contact-submit {
+    @extend .thin-line-border;
+
+    background-color: $accent;
+    color: $neutralDarker;
+  }
+
+  #contact-cancel {
+    border-color: $accent;
+    background-color: $neutralDarker;
+    color: $accent;
   }
 }

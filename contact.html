@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="contact">
+  <div id="contact-header">
+    <h2>We'd Like to Get to Know You</h2>
+    <p>Send us a message:</p>
+  </div>
+  <div id="contact-body">
+    <form id="contact-form">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Name" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-danger"
+            type="email"
+            placeholder="example@email.com"
+            value=""
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+        <p class="help is-danger">This email is invalid</p>
+      </div>
+
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            Subscribe to the mailing list.
+          </label>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button id="contact-submit" class="button">Submit</button>
+        </div>
+        <div class="control">
+          <button id="contact-cancel" class="button">Cancel</button>
+        </div>
+      </div>
+    </form>
+
+    <iframe
+      id="contact-location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24802.316649548422!2d-77.03535402132285!3d39.008707241418314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf4e666ae927%3A0x8433a865b29adf!2sSilver%20Spring%2C%20MD!5e0!3m2!1sen!2sus!4v1627438021282!5m2!1sen!2sus"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>

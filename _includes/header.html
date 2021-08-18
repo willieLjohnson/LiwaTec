@@ -25,12 +25,12 @@
 </script>
 <nav id="header" class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a href="{{ site.baseurl }}/" class="site-avatar" id="site-avatar"
+    <a id="site-avatar" href="{{ site.baseurl }}/" class="site-avatar"
       ><img src="{{ site.baseurl }}/images/liwatec-logo-square.png"
     /></a>
     <div class="site-info">
       <h1 class="site-name">
-        <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+        <a id="site-anchor" href="{{ site.baseurl }}/">{{ site.name }}</a>
       </h1>
       <p class="site-description">The Future of Design and Technology</p>
     </div>
@@ -49,11 +49,21 @@
 
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
-      <a id="home" class="navbar-item" href="{{ site.baseurl }}/">Home</a>
+      <a id="home-anchor" class="navbar-item" href="{{ site.baseurl }}/"
+        >Home</a
+      >
 
-      <a id="blog" class="navbar-item" href="{{ site.baseurl }}/blog">Blog</a>
-      <a id="about" class="navbar-item" href="{{ site.baseurl }}/about"
+      <a id="blog-anchor" class="navbar-item" href="{{ site.baseurl }}/blog"
+        >Blog</a
+      >
+      <a id="about-anchor" class="navbar-item" href="{{ site.baseurl }}/about"
         >About</a
+      >
+      <a
+        id="contact-anchor"
+        class="navbar-item"
+        href="{{ site.baseurl }}/contact"
+        >Contact</a
       >
     </div>
   </div>
