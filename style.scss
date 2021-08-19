@@ -478,15 +478,8 @@ article {
 
     #contact-form {
       width: 50%;
-      text-align: center;
       @include mobile {
         width: 90%;
-      }
-
-      .is-grouped {
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
       }
 
       label {
@@ -497,7 +490,6 @@ article {
         @extend .thin-line-border;
         color: $neutralLighter;
         background-color: $transparentNeutralDark;
-        text-align: center;
         &::placeholder {
           color: $neutral;
         }
@@ -525,14 +517,14 @@ article {
       #contact-submit {
         @extend .thin-line-border;
 
-        background-color: $accent;
+        background-color: $accentLight;
         color: $neutralDarker;
       }
 
       #contact-cancel {
-        border-color: $accent;
+        border-color: $accentLight;
         background-color: $neutralDarker;
-        color: $accent;
+        color: $accentLight;
       }
     }
 
