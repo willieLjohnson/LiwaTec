@@ -44,8 +44,16 @@
 }
 
 .transparent-blur-background {
-  background-color: adjust-color($transparentNeutralDarker, $alpha: -0.6);
-  backdrop-filter: blur(2px);
+  background-color: adjust-color($transparentNeutralDarker, $alpha: -0.2);
+
+  /* if backdrop support: very transparent and blurred */
+  @supports (
+    (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))
+  ) {
+    background-color: adjust-color($transparentNeutralDarker, $alpha: -0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
 }
 
 html {
@@ -287,8 +295,6 @@ canvas {
 
 #header {
   @extend .thin-line-border, .transparent-blur-background;
-  backdrop-filter: blur(2.5px);
-
   padding: 20px;
   border-top: none;
   width: 100%;
@@ -314,7 +320,8 @@ canvas {
     text-align: center;
     font-weight: 300;
     letter-spacing: 1px;
-    transition: all 0.25s ease-out;
+    transition: all 0.1s;
+    cursor: pointer;
 
     @include mobile {
       margin: 0 10px;
@@ -323,10 +330,9 @@ canvas {
     }
 
     &:hover {
-      cursor: pointer;
       color: $primary;
       background-color: $accentLight;
-      box-shadow: 0 0 10px $accentLight;
+      box-shadow: 0 0 8px $accentLight;
       font-size: 1.1em;
     }
 
@@ -342,7 +348,8 @@ canvas {
 .home {
   .hero {
     @extend .thin-line-border, .transparent-blur-background, .radial-background;
-
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
     overflow-y: hidden;
 
     p {
