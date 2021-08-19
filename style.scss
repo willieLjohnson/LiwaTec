@@ -459,9 +459,6 @@ article {
 // Contact
 //
 .contact {
-  @extend .thin-line-border, .transparent-blur-background;
-  padding: 2em;
-
   #contact-header {
     text-align: center;
   }
@@ -478,10 +475,13 @@ article {
     }
 
     #contact-form {
-      width: 50%;
+      @extend .thin-line-border, .transparent-blur-background;
+      padding: 2em;
+      width: 60%;
+      text-align: center;
+
       @include mobile {
         width: 90%;
-        text-align: center;
       }
 
       label {
@@ -523,11 +523,9 @@ article {
       }
 
       .is-grouped {
-        @include mobile {
-          flex-flow: row;
-          align-items: center;
-          justify-content: center;
-        }
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
       }
 
       #contact-submit {
@@ -545,20 +543,20 @@ article {
     }
 
     #contact-location {
-      border-radius: 10px;
-      border-style: none;
+      border: solid $neutralLight;
+      border-radius: 5px;
+      border-width: 1px;
       overflow: visible;
       min-height: 500px;
-      margin: 2em 2em 2em 2em;
+      margin: 0.5em 2em 2em 2em;
 
-      width: 50%;
+      width: 60%;
       height: 100%;
-      margin-bottom: 10px;
-      filter: grayscale(100%) contrast(100%);
+      filter: grayscale(100%) contrast(100%) invert(100%);
 
       @include mobile {
         width: 90%;
-        margin: 2em 1em 2em 2em;
+        margin: 0.5em 2em 2em 2em;
       }
     }
   }
