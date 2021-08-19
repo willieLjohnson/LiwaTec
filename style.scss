@@ -476,6 +476,66 @@ article {
       flex-direction: column;
     }
 
+    #contact-form {
+      width: 50%;
+      text-align: center;
+      @include mobile {
+        width: 90%;
+      }
+
+      .is-grouped {
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      label {
+        color: $neutralLight;
+      }
+
+      input {
+        @extend .thin-line-border;
+        color: $neutralLighter;
+        background-color: $transparentNeutralDark;
+        text-align: center;
+        &::placeholder {
+          color: $neutral;
+        }
+      }
+
+      textarea {
+        @extend .thin-line-border;
+        color: $neutralLighter;
+        background-color: $transparentNeutralDark;
+      }
+
+      select {
+        @extend .thin-line-border;
+        color: $neutralLighter;
+        background-color: $transparentNeutralDark;
+      }
+
+      button {
+        transition: all 0.1s;
+        &:hover {
+          font-size: 1.1em;
+        }
+      }
+
+      #contact-submit {
+        @extend .thin-line-border;
+
+        background-color: $accent;
+        color: $neutralDarker;
+      }
+
+      #contact-cancel {
+        border-color: $accent;
+        background-color: $neutralDarker;
+        color: $accent;
+      }
+    }
+
     #contact-location {
       border-radius: 10px;
       border-style: none;
@@ -493,50 +553,5 @@ article {
         margin: 2em 1em 2em 2em;
       }
     }
-  }
-
-  #contact-form {
-    width: 50%;
-    @include mobile {
-      width: 90%;
-    }
-  }
-
-  label {
-    color: $neutralLight;
-  }
-
-  input {
-    @extend .thin-line-border;
-    color: $neutralLighter;
-    background-color: $transparentNeutralDark;
-    &::placeholder {
-      color: $neutral;
-    }
-  }
-
-  textarea {
-    @extend .thin-line-border;
-    color: $neutralLighter;
-    background-color: $transparentNeutralDark;
-  }
-
-  select {
-    @extend .thin-line-border;
-    color: $neutralLighter;
-    background-color: $transparentNeutralDark;
-  }
-
-  #contact-submit {
-    @extend .thin-line-border;
-
-    background-color: $accent;
-    color: $neutralDarker;
-  }
-
-  #contact-cancel {
-    border-color: $accent;
-    background-color: $neutralDarker;
-    color: $accent;
   }
 }
