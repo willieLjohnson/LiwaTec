@@ -468,18 +468,20 @@ article {
 
   #contact-body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     @include mobile {
       flex-direction: column;
+      text-align: center;
     }
 
     #contact-form {
       width: 50%;
       @include mobile {
         width: 90%;
+        text-align: center;
       }
 
       label {
@@ -499,18 +501,32 @@ article {
         @extend .thin-line-border;
         color: $neutralLighter;
         background-color: $transparentNeutralDark;
+        &::placeholder {
+          color: $neutral;
+        }
       }
 
       select {
         @extend .thin-line-border;
         color: $neutralLighter;
         background-color: $transparentNeutralDark;
+        option {
+          color: $neutralLighter;
+        }
       }
 
       button {
         transition: all 0.1s;
         &:hover {
           font-size: 1.1em;
+        }
+      }
+
+      .is-grouped {
+        @include mobile {
+          flex-flow: row;
+          align-items: center;
+          justify-content: center;
         }
       }
 
@@ -533,7 +549,7 @@ article {
       border-style: none;
       overflow: visible;
       min-height: 500px;
-      margin: 2em 0em 2em 2em;
+      margin: 2em 2em 2em 2em;
 
       width: 50%;
       height: 100%;
