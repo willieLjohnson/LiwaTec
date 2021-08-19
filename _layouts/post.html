@@ -3,14 +3,14 @@ layout: default
 ---
 
 <article class="post">
-  <a id="post-back" class="button is-normal" href="{{ site.baseurl }}/blog">
+  <a id="post-back" class="button is-normal" href="javascript:history.back()">
     &blacktriangleleft; Back
   </a>
   <h1>{{ page.title }}</h1>
   <div class="entry">{{ content }}</div>
 
   <div class="date">Written on {{ page.date | date: "%B %e, %Y" }}</div>
-  <a id="post-done" class="button is-normal" href="{{ site.baseurl }}/blog">
+  <a id="post-done" class="button is-normal" href="javascript:history.back()">
     Done &checkmark;
   </a>
   {% include disqus.html %}
