@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for product in site.products %}
+  <div class="thumbnail">
+    <h5>
+      <a href="{{ site.baseurl }}{{ product.url }}/">{{ product.title }}</a>
+    </h5>
+
+    <p class="entry">{{ product.excerpt }}</p>
+
+    <a href="{{ site.baseurl }}{{ product.url }}/" class="read-more"
+      >Read More</a
+    >
+  </div>
+  {% endfor %}
+</div>
