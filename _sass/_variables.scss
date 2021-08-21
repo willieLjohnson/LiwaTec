@@ -11,24 +11,31 @@ $rosso-corsa: #d00000ff;
 
 $earth-yellow: #d7af70;
 $prussian-blue: #1c3144ff;
-$oxford-blue: #001b2eff;
 
 $selective-yellow: #ffba08ff;
 
-$spanish-gray: hsla(0, 0%, 60%, 1);
+$black: rgb(19, 19, 19);
+$jet: hsla(0, 0%, 19%, 1);
+$dim-gray: hsla(0, 0%, 41%, 1);
 $sonic-silver: hsla(0, 0%, 44%, 1);
+$battleship-grey: hsla(0, 0%, 52%, 1);
+$spanish-gray: hsla(0, 0%, 60%, 1);
 $gray-x-11-gray: hsla(0, 0%, 74%, 1);
 $silver: hsla(0, 0%, 77%, 1);
 $platinum: hsla(0, 0%, 90%, 1);
-$jet: hsla(0, 0%, 19%, 1);
-$dim-gray: hsla(0, 0%, 41%, 1);
-$battleship-grey: hsla(0, 0%, 52%, 1);
 
-$primary: $prussian-blue;
-$primaryLight: $earth-yellow;
-$primaryDark: $oxford-blue;
+$neutralDarkest: $black;
+$neutralDarker: $jet;
+$neutralDark: $dim-gray;
+$neutral: $sonic-silver;
+$neutralLight: $silver;
+$neutralLighter: $platinum;
 
-$secondary: $cyan-process;
+$primary: $neutralDarker;
+$primaryLight: $neutralDark;
+$primaryDark: $neutralDarkest;
+
+$secondary: $neutral;
 $secondaryLight: $vivid-sky-blue;
 $secondaryDark: $jet;
 
@@ -38,12 +45,6 @@ $accentDanger: $rosso-corsa;
 $accentSubmit: $vivid-sky-blue;
 
 $transparentAccentLight: adjust-color($accentLight, $alpha: -0.6);
-
-$neutralDarker: $jet;
-$neutralDark: $dim-gray;
-$neutral: $sonic-silver;
-$neutralLight: $silver;
-$neutralLighter: $platinum;
 
 $transparentNeutralDarker: adjust-color($neutralDarker, $alpha: -0.6);
 $transparentNeutralDark: adjust-color($neutralDark, $alpha: -0.6);

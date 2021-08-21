@@ -24,7 +24,7 @@
 .radial-background {
   background-image: radial-gradient(
       circle at center center,
-      $neutralDarker,
+      $primary,
       $transparentNeutralDarker
     ),
     repeating-radial-gradient(
@@ -45,6 +45,7 @@
 
 .transparent-blur-background {
   background-color: adjust-color($transparentNeutralDarker, $alpha: -0.2);
+  box-shadow: 0 0 8px 4px adjust-color($color: $primaryDark, $alpha: -0.7);
 
   /* if backdrop support: very transparent and blurred */
   @supports (
@@ -57,7 +58,7 @@
 }
 
 html {
-  background: $neutralDarker;
+  background: $primary;
 }
 
 body {
@@ -206,11 +207,11 @@ canvas {
 // Specify the color of the selection
 ::-moz-selection {
   color: $accentLight;
-  background: $neutralDarker;
+  background: $primary;
 }
 ::selection {
   color: $accentLight;
-  background: $neutralDarker;
+  background: $primary;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -369,7 +370,7 @@ canvas {
 
     .button {
       background-color: $accentLight;
-      color: $neutralDarker;
+      color: $primary;
       border: none;
       animation: shadow-pulse 2s both infinite;
       transition: all 0.25s ease-out;
@@ -398,10 +399,24 @@ canvas {
   align-items: center;
 
   .profile-info {
-    width: 25%;
-    @include mobile {
-      width: 90%;
+    @extend .thin-line-border;
+    border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
+    background-color: adjust-color($color: $primaryLight, $alpha: -0.85);
+    width: 35%;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 50%;
     }
+
+    @include mobile {
+      width: 60%;
+    }
+
     .social-container {
       display: flex;
       flex-direction: row;
@@ -455,9 +470,9 @@ article {
 
   blockquote {
     margin: 1.8em 0.8em;
-    border-left: 2px solid $neutralDark;
+    border-left: 2px solid $primaryLight;
     padding: 0.1em 1em;
-    color: $neutralDark;
+    color: $primaryLight;
     font-size: 22px;
     font-style: italic;
   }
@@ -475,7 +490,7 @@ article {
     min-width: 75px;
     width: 10%;
     border-color: $accentLight;
-    background-color: $neutralDarker;
+    background-color: $primary;
     color: $accentLight;
     align-self: flex-start;
 
@@ -486,7 +501,7 @@ article {
       margin-top: 1em;
       @extend .thin-line-border;
       background-color: $accentLight;
-      color: $neutralDarker;
+      color: $primary;
       align-self: center;
     }
   }
@@ -590,12 +605,12 @@ article {
         @extend .thin-line-border;
 
         background-color: $accentLight;
-        color: $neutralDarker;
+        color: $primary;
       }
 
       #contact-cancel {
         border-color: $accentLight;
-        background-color: $neutralDarker;
+        background-color: $primary;
         color: $accentLight;
       }
     }
