@@ -51,8 +51,8 @@ url: https://willieljohnson.github.io/LiwaTec/
 baseurl: '/LiwaTec'
 
 collections:
-  - products
-
+  products:
+    output: true
 #
 # !! You don't need to change any of the configuration flags below !!
 #

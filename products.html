@@ -2,18 +2,34 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="products">
   {% for product in site.products %}
-  <div class="thumbnail">
-    <h5>
-      <a href="{{ site.baseurl }}{{ product.url }}/">{{ product.title }}</a>
-    </h5>
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <a href="{{ site.baseurl }}{{ product.url }}/">{{ product.title }}</a>
+      </p>
+      <button class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="{{ product.imageurl }}" alt="Placeholder image" />
+      </figure>
+    </div>
+    <div class="card-content">
+      <p>{{ product.description }}</p>
+    </div>
+    <footer class="card-footer">
+      <a href="#" class="card-footer-item">Share</a>
 
-    <p class="entry">{{ product.excerpt }}</p>
-
-    <a href="{{ site.baseurl }}{{ product.url }}/" class="read-more"
-      >Read More</a
-    >
+      <a href="{{ site.baseurl }}{{ product.url }}/" class="card-footer-item"
+        >Read More</a
+      >
+    </footer>
   </div>
   {% endfor %}
 </div>

@@ -59,11 +59,11 @@
 
 html {
   background: $primary;
+  font-family: $base-font-family;
 }
 
 body {
   @extend .dotted-background;
-  font-family: $base-font-family;
   color: $neutralLighter;
   padding: 0em 2em 0em 2em;
   display: flex;
@@ -430,7 +430,45 @@ canvas {
 }
 
 //
-// .blog
+// Products
+//
+.products {
+  @extend .thin-line-border, .transparent-blur-background;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    @extend .thin-line-border;
+    border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
+    background-color: adjust-color($color: $primaryLight, $alpha: -0.85);
+    flex: 1 16%;
+    margin: 2%;
+    color: $neutralLighter;
+    height: min-content;
+
+    &:first-child,
+    &:nth-child(2) {
+      flex: 2 46%;
+    }
+
+    .card-image {
+      padding: 0.5em;
+      max-block-size: 500px;
+      overflow: scroll;
+      border-radius: 10px;
+
+      img {
+        border-radius: 10px;
+        opacity: 0.8;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+//
+// Blog
 //
 .posts {
   @extend .thin-line-border, .transparent-blur-background;
