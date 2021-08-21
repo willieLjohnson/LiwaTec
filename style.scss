@@ -434,16 +434,14 @@ canvas {
 //
 .products {
   @extend .thin-line-border, .transparent-blur-background;
-  padding: 1em;
   display: flex;
   flex-wrap: wrap;
-
   .card {
     @extend .thin-line-border;
     border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
-    background-color: adjust-color($color: $primaryLight, $alpha: -0.85);
+    background-color: adjust-color($color: $primaryLight, $alpha: -0.8);
     flex: 1 16%;
-    margin: 2%;
+    margin: 1%;
     color: $neutralLighter;
     height: min-content;
 
