@@ -432,12 +432,17 @@ canvas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  @include mobile {
+    flex-direction: column;
+  }
   .tabs {
     margin: 0px;
     border-bottom: none;
     position: relative;
     bottom: -23px;
+    @include mobile {
+      position: static;
+    }
     ul {
       @extend .thin-line-border;
       border-bottom: none;
@@ -478,8 +483,9 @@ canvas {
   @extend .thin-line-border, .transparent-blur-background;
   display: flex;
   flex-wrap: wrap;
-  display: column;
-
+  @include mobile {
+    flex-direction: column;
+  }
   .card {
     @extend .thin-line-border;
     border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
@@ -488,7 +494,6 @@ canvas {
     margin: 1%;
     color: $neutralLighter;
     height: min-content;
-
     &:first-child,
     &:nth-child(2) {
       flex: 2 46%;
