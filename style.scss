@@ -98,16 +98,15 @@ section {
     }
     .tabs {
       margin: 0px;
-      border-bottom: none;
       position: relative;
-      bottom: -18px;
+      bottom: -14px;
+
       @include mobile {
         position: static;
       }
       ul {
         @extend .thin-line-border;
-        border-bottom: none;
-        background-color: $transparentNeutralDarker;
+        background-color: adjust-color($color: $neutralDarker, $alpha: -0.2);
         padding: 0;
         li {
           &:not(.selected):hover {
@@ -128,9 +127,11 @@ section {
 
         .selected {
           border-radius: 5px;
-          height: 110%;
+          height: 120%;
           color: $primary;
           background: $accentLight;
+          position: relative;
+          bottom: -4px;
           span {
             color: $primary;
             font-weight: 600;
