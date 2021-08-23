@@ -85,6 +85,60 @@ section {
       padding: 1em 0em 1em 0em;
     }
   }
+
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+    }
+    h2 {
+      margin-bottom: 0.1em;
+    }
+    .tabs {
+      margin: 0px;
+      border-bottom: none;
+      position: relative;
+      bottom: -18px;
+      @include mobile {
+        position: static;
+      }
+      ul {
+        @extend .thin-line-border;
+        border-bottom: none;
+        background-color: $transparentNeutralDarker;
+        padding: 0;
+        li {
+          &:not(.selected):hover {
+            background: transparent;
+            & > a > span {
+              color: $neutralLight;
+            }
+          }
+
+          a {
+            border: none;
+
+            span {
+              color: $primaryLight;
+            }
+          }
+        }
+
+        .selected {
+          border-radius: 5px;
+          height: 110%;
+          color: $primary;
+          background: $accentLight;
+          span {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
 
 .container {
@@ -428,56 +482,6 @@ canvas {
 //
 // Products
 //
-.page-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  @include mobile {
-    flex-direction: column;
-  }
-  .tabs {
-    margin: 0px;
-    border-bottom: none;
-    position: relative;
-    bottom: -23px;
-    @include mobile {
-      position: static;
-    }
-    ul {
-      @extend .thin-line-border;
-      border-bottom: none;
-      background-color: $transparentNeutralDarker;
-      padding: 0;
-      li {
-        &:not(.selected):hover {
-          background: transparent;
-          & > a > span {
-            color: $neutralLight;
-          }
-        }
-
-        a {
-          border: none;
-
-          span {
-            color: $primaryLight;
-          }
-        }
-      }
-
-      .selected {
-        border-radius: 5px;
-        height: 85%;
-        color: $primary;
-        background: $accent;
-        span {
-          color: $primary;
-          font-weight: 500;
-        }
-      }
-    }
-  }
-}
 
 .products {
   @extend .thin-line-border, .transparent-blur-background;
