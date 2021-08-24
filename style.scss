@@ -15,48 +15,6 @@
 /* BASE RULES */
 /**************/
 
-.dotted-background {
-  background-image: radial-gradient($neutralLighter 0.5px, transparent 0);
-  background-size: 20px 19px;
-  background-position: -20px -20px;
-}
-
-.radial-background {
-  background-image: radial-gradient(
-      circle at center center,
-      $primary,
-      $transparentNeutralDarker
-    ),
-    repeating-radial-gradient(
-      circle at center center,
-      $transparentNeutralDarker,
-      $transparentNeutralDarker,
-      20px,
-      transparent 40px,
-      transparent 20px
-    );
-  background-blend-mode: multiply;
-}
-
-.thin-line-border {
-  border: 0.5px solid adjust-color($neutralLighter, $alpha: -0.8);
-  border-radius: 5px;
-}
-
-.transparent-blur-background {
-  background-color: adjust-color($transparentNeutralDarker, $alpha: -0.2);
-  box-shadow: 0 0 8px 4px adjust-color($color: $primaryDark, $alpha: -0.7);
-
-  /* if backdrop support: very transparent and blurred */
-  @supports (
-    (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))
-  ) {
-    background-color: adjust-color($transparentNeutralDarker, $alpha: -0.6);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-  }
-}
-
 html {
   background: $primary;
   font-family: $base-font-family;
@@ -72,82 +30,6 @@ body {
   @include mobile {
     padding: 0em 0.9em 0em 0.9em;
   }
-}
-
-section {
-  &#content {
-    margin-top: 110px;
-    padding: 1em 0em 1em 0em;
-
-    @include mobile {
-      margin-top: 150px;
-
-      padding: 1em 0em 1em 0em;
-    }
-  }
-
-  .section-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    @include mobile {
-      flex-direction: column;
-    }
-    h2 {
-      margin-bottom: 0.1em;
-    }
-    .tabs {
-      margin: 0px;
-      position: relative;
-      bottom: -14px;
-
-      @include mobile {
-        position: static;
-      }
-      ul {
-        @extend .thin-line-border;
-        background-color: adjust-color($color: $neutralDarker, $alpha: -0.2);
-        padding: 0;
-        li {
-          &:not(.selected):hover {
-            background: transparent;
-            & > a > span {
-              color: $neutralLight;
-            }
-          }
-
-          a {
-            border: none;
-
-            span {
-              color: $primaryLight;
-            }
-          }
-        }
-
-        .selected {
-          border-radius: 5px;
-          height: 120%;
-          color: $primary;
-          background: $accentLight;
-          position: relative;
-          bottom: -4px;
-          span {
-            color: $primary;
-            font-weight: 600;
-          }
-        }
-      }
-    }
-  }
-}
-
-.container {
-  flex: 1;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
 }
 
 h1,
@@ -247,6 +129,82 @@ img {
 canvas {
   position: fixed;
   z-index: -1;
+}
+
+section {
+  &#content {
+    margin-top: 110px;
+    padding: 1em 0em 1em 0em;
+
+    @include mobile {
+      margin-top: 150px;
+
+      padding: 1em 0em 1em 0em;
+    }
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+    }
+    h2 {
+      margin-bottom: 0.1em;
+    }
+    .tabs {
+      margin: 0px;
+      position: relative;
+      bottom: -14px;
+
+      @include mobile {
+        position: static;
+      }
+      ul {
+        @extend .thin-line-border;
+        background-color: adjust-color($color: $neutralDarker, $alpha: -0.2);
+        padding: 0;
+        li {
+          &:not(.selected):hover {
+            background: transparent;
+            & > a > span {
+              color: $neutralLight;
+            }
+          }
+
+          a {
+            border: none;
+
+            span {
+              color: $primaryLight;
+            }
+          }
+        }
+
+        .selected {
+          border-radius: 5px;
+          height: 120%;
+          color: $primary;
+          background: $accentLight;
+          position: relative;
+          bottom: -4px;
+          span {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 10px;
+  width: 100%;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -444,37 +402,88 @@ canvas {
   padding: 2em;
   height: 100%;
   display: flex;
-  text-align: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  .profile-info {
-    @extend .thin-line-border;
-    border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
-    background-color: adjust-color($color: $primaryLight, $alpha: -0.85);
-    width: 35%;
-    padding: 1em;
-    border-radius: 5px;
+  #about-container {
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 
-    img {
-      max-width: 50%;
-    }
-
-    @include mobile {
-      width: 60%;
-    }
-
-    .social-container {
+    .container {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+    }
+
+    .block {
+      @extend .container-style;
+      margin: 0.5em;
+      padding: 0.5em;
+      height: 100%;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #about-left {
+      flex: 2;
+      #about-left-body {
+        flex: 2;
+      }
+
+      .founder {
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 70px;
+        }
+
+        .social-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          a {
+            padding: 0.2em;
+          }
+        }
+      }
+    }
+
+    #about-right {
+      flex: 1;
       align-items: center;
-      a {
-        padding: 0.2em;
+      #cta {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        input,
+        select {
+          text-align: center;
+        }
+
+        #cta-subscribe {
+          background-color: $accent;
+          color: $primaryDark;
+          font-weight: 500;
+          border: none;
+        }
+      }
+
+      #cta-links {
+        margin: 0.5em;
+        padding: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+          margin: 0.1em;
+        }
       }
     }
   }
@@ -492,9 +501,8 @@ canvas {
     flex-direction: column;
   }
   .card {
-    @extend .thin-line-border;
-    border-color: adjust-color($color: $primaryLight, $alpha: -0.5);
-    background-color: adjust-color($color: $primaryLight, $alpha: -0.8);
+    @extend .container-style;
+
     flex: 1 16%;
     margin: 1%;
     color: $neutralLighter;
@@ -628,6 +636,46 @@ article {
 //
 // Contact
 //
+.cta-form {
+  label {
+    color: $neutralLight;
+  }
+
+  input {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+    &::placeholder {
+      color: $neutral;
+    }
+  }
+
+  textarea {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+    &::placeholder {
+      color: $neutral;
+    }
+  }
+
+  select {
+    @extend .thin-line-border;
+    color: $neutralLighter;
+    background-color: $transparentNeutralDark;
+    option {
+      color: $neutralLighter;
+    }
+  }
+
+  button {
+    transition: all 0.1s;
+    &:hover {
+      font-size: 1.1em;
+    }
+  }
+}
+
 .contact {
   #contact-header {
     text-align: center;
@@ -652,44 +700,6 @@ article {
 
       @include mobile {
         width: 90%;
-      }
-
-      label {
-        color: $neutralLight;
-      }
-
-      input {
-        @extend .thin-line-border;
-        color: $neutralLighter;
-        background-color: $transparentNeutralDark;
-        &::placeholder {
-          color: $neutral;
-        }
-      }
-
-      textarea {
-        @extend .thin-line-border;
-        color: $neutralLighter;
-        background-color: $transparentNeutralDark;
-        &::placeholder {
-          color: $neutral;
-        }
-      }
-
-      select {
-        @extend .thin-line-border;
-        color: $neutralLighter;
-        background-color: $transparentNeutralDark;
-        option {
-          color: $neutralLighter;
-        }
-      }
-
-      button {
-        transition: all 0.1s;
-        &:hover {
-          font-size: 1.1em;
-        }
       }
 
       .is-grouped {

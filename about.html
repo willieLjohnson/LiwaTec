@@ -36,45 +36,86 @@ layout: default
 <!-- Content of Section -->
 
 <div class="about">
-  <h2>Welcome to LiwaTec</h2>
-
-  <p>Together we create the products of the future.</p>
-
-  <div class="profile-info">
-    <img
-      src="{{ site.baseurl }}/images/wjdev.png"
-      style="max-block-size: 250px"
-    />
-
-    <h3>Willie Johnson</h3>
-    <span>FOUNDER</span>
-
-    <div class="social-icons">
-      <div class="social-container">
-        <a href="mailto: liwa.johnson@gmail.com" class="fa fa-envelope"></a>
+  <h3>A software company experimenting with future Technology</h3>
+  <div id="about-container" class="container">
+    <div id="about-left" class="container">
+      <div id="about-left-body" class="block">
         <p>
-          <a href="mailto: liwa.johnson@gmail.com">liwa.johnson@gmail.com</a>
+          LiwaTec is a celebration of humanity and the wonderful things we can
+          accomplish with design, technology, and innovation.
+        </p>
+        <p>
+          We focus on technology because we believe that technology does not
+          just solve our problems. It also shapes who we are, how we work, how
+          we live, and how we interact with the world around us.
+        </p>
+        <p>
+          Our goal with this website is to showcase our products and to honor
+          the work of other people creating technology that changes our lives
+          for the better.
+        </p>
+        <p>
+          Our mission is to create a world where technology is build on solid
+          principles that are life-affirming, sustainable, and well designed for
+          us.
         </p>
       </div>
-      <div class="social-container">
-        <a href="tel:2409078829" class="fa fa-phone-alt"></a>
-        <p><a href="tel:2409078829">+1 (240) 907-8829</a></p>
+      <div class="block founder">
+        <img
+          src="{{ site.baseurl }}/images/wjdev.png"
+          style="max-block-size: 250px"
+        />
+
+        <h3>Willie Johnson</h3>
+        <span>FOUNDER</span>
+
+        <div class="social-icons">
+          <div class="social-container">
+            <a href="mailto: liwa.johnson@gmail.com" class="fa fa-envelope"></a>
+            <p>
+              <a href="mailto: liwa.johnson@gmail.com"
+                >liwa.johnson@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="social-container">
+            <a href="tel:2409078829" class="fa fa-phone-alt"></a>
+            <p><a href="tel:2409078829">+1 (240) 907-8829</a></p>
+          </div>
+          <div class="social-container">
+            <a
+              href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
+              class="fas fa-map-marked-alt"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <p>
+              <a
+                href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Silver Spring, MD</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="social-container">
-        <a
-          href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
-          class="fas fa-map-marked-alt"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-        <p>
-          <a
-            href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Silver Spring, MD</a
-          >
-        </p>
+    </div>
+    <div id="about-right" class="container">
+      <div id="cta" class="block">{% include subscription-form.html %}</div>
+      <div id="cta-links" class="block">
+        <div>
+          <a href="#" class="fa fa-facebook"></a>
+        </div>
+        <div>
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <div>
+          <a href="tel:2409078829" class="fa fa-phone-alt"></a>
+        </div>
+        <div>
+          <a href="mailto: liwa.johnson@gmail.com" class="fa fa-envelope"></a>
+        </div>
       </div>
     </div>
   </div>
