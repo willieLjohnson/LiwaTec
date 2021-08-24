@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-section
 ---
 
 <div class="home">
@@ -16,15 +16,5 @@ layout: default
     </div>
   </section>
 
-  <div class="posts">
-    {% for post in site.posts %}
-    <div class="thumbnail">
-      <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
-
-      <p class="entry">{{ post.excerpt }}</p>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </div>
-    {% endfor %}
-  </div>
+  <div class="posts">{% include posts.html %}</div>
 </div>

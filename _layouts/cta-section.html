@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<section class="section cta-section">
+  <section id="{{ page.id }}">
+    <!-- Header of Section -->
+    <div class="section-header">
+      <h2>{{ page.title }}</h2>
+
+      <div class="tabs">
+        <ul>
+          {% for tab in page.tabs %}
+          <li class="{{ tab.class }}">
+            <a>
+              <span>{{ tab.title }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Content of Section -->
+    {{ content }}
+  </section>
+  <!-- CTA -->
+  <div id="section-cta" class="container">
+    <div id="cta" class="block">{% include subscription-form.html %}</div>
+    <div class="block founder">
+      <img
+        src="{{ site.baseurl }}/images/wjdev.png"
+        style="max-block-size: 250px"
+      />
+
+      <h3>Willie Johnson</h3>
+      <span>FOUNDER</span>
+
+      <div class="social-icons">
+        <div class="social-container">
+          <a href="mailto: liwa.johnson@gmail.com" class="fa fa-envelope"></a>
+          <p>
+            <a href="mailto: liwa.johnson@gmail.com">liwa.johnson@gmail.com</a>
+          </p>
+        </div>
+        <div class="social-container">
+          <a href="tel:2409078829" class="fa fa-phone-alt"></a>
+          <p><a href="tel:2409078829">+1 (240) 907-8829</a></p>
+        </div>
+        <div class="social-container">
+          <a
+            href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
+            class="fas fa-map-marked-alt"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+          <p>
+            <a
+              href="https://goo.gl/maps/W1RsYxPZBjwneiyz8"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Silver Spring, MD</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
