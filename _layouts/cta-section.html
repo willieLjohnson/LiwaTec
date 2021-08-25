@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="section cta-section">
-  <section id="{{ page.id }}">
+  <div id="{{ page.id }}" class="container is-flex-grow-3">
     <!-- Header of Section -->
     <div class="section-header">
       <h2>{{ page.title }}</h2>
@@ -23,7 +23,7 @@ layout: default
 
     <!-- Content of Section -->
     {{ content }}
-  </section>
+  </div>
   <!-- CTA -->
   <div id="section-cta" class="container">
     <div id="cta" class="block">{% include subscription-form.html %}</div>

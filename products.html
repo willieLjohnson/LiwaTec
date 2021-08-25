@@ -1,39 +1,14 @@
 ---
 layout: cta-section
+title: Latest Products
+tabs:
+  [
+    { title: 'All', class: 'selected' },
+    { title: Mobile Apps', class: '' },
+    { title: 'Games', class: '' },
+    { title: 'Websites', class: '' },
+  ]
 ---
-
-<!-- Section Header -->
-
-<div class="section-header">
-  <h2>Latest Products</h2>
-
-  <div class="tabs">
-    <ul>
-      <li class="selected">
-        <a>
-          <span>All</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Mobile Apps</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Game</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Websites</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<!-- Content of Section -->
 
 <div class="products">
   {% for product in site.products %}

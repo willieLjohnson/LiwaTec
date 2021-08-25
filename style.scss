@@ -363,10 +363,8 @@ canvas {
   .block {
     @extend .container-style;
     margin: 0.5em;
-    padding: 0.5em;
-    height: 100%;
+    padding: 1em;
     width: 100%;
-    flex: 1;
     display: flex;
     flex-direction: column;
   }
@@ -395,8 +393,8 @@ canvas {
 
   #section-cta {
     width: 100%;
-    flex: 1;
     text-align: center;
+    margin-top: 60px;
     input,
     select {
       text-align: center;
@@ -464,24 +462,21 @@ canvas {
 
   #about-header {
     p {
-      font-size: clamp(1em, max(2vh, 2vw), 2em);
+      font-size: 1.4em;
     }
   }
 
   #about-body {
     #about-links {
-      margin: 0.5em;
-      padding: 0.5em;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       a {
-        margin: 0.1em;
+        margin: 1em;
+        font-size: 1em;
       }
     }
     #about-posts {
-      padding: 1em;
-
       .thumbnail {
         display: flex;
         flex-direction: column;
@@ -494,8 +489,8 @@ canvas {
         }
         img {
           opacity: 0.9;
-          width: 50px;
-          height: 50px;
+          width: 100px;
+          height: 100px;
         }
       }
     }
