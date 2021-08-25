@@ -1,38 +1,13 @@
 ---
-layout: default-section
+layout: cta-section
+title: Latest Posts
+tabs:
+  [
+    { title: 'All', class: 'selected' },
+    { title: 'Devlogs', class: '' },
+    { title: 'Tutorials', class: '' },
+    { title: 'Research', class: '' },
+  ]
 ---
-
-<!-- Section Header -->
-
-<div class="section-header">
-  <h2>Latest Posts</h2>
-
-  <div class="tabs">
-    <ul>
-      <li class="selected">
-        <a>
-          <span>All</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Devlogs</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Tutorials</span>
-        </a>
-      </li>
-      <li>
-        <a>
-          <span>Research</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<!-- Content of Section -->
 
 <div class="posts">{% include posts.html %}</div>

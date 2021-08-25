@@ -137,7 +137,6 @@ canvas {
 
   @include mobile {
     margin-top: 150px;
-
     padding: 1em 0em 1em 0em;
   }
 }
@@ -149,6 +148,9 @@ canvas {
   @include mobile {
     flex-direction: column;
   }
+  @include half {
+    flex-direction: column;
+  }
   h2 {
     margin-bottom: 0.1em;
   }
@@ -157,14 +159,21 @@ canvas {
     position: relative;
     bottom: -14px;
 
-    @include mobile {
-      position: static;
-    }
     ul {
       @extend .thin-line-border;
       background-color: adjust-color($color: $neutralDarker, $alpha: -0.2);
       padding: 0;
+
+      @include mobile {
+        display: flex;
+        justify-content: space-around;
+      }
+
       li {
+        @include mobile {
+          flex: 1;
+        }
+
         &:not(.selected):hover {
           background: transparent;
           & > a > span {
@@ -355,6 +364,13 @@ canvas {
   display: flex;
   flex-direction: row;
 
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -367,6 +383,9 @@ canvas {
     width: 100%;
     display: flex;
     flex-direction: column;
+    @include mobile {
+      margin: 0.5em 1em 0.5em 1em;
+    }
   }
 
   .founder {
@@ -393,8 +412,21 @@ canvas {
 
   #section-cta {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-top: 60px;
+    flex: 0;
+
+    @include half {
+      margin-top: 122px;
+    }
+
+    @include mobile {
+      margin-top: 0.5em;
+    }
+
     input,
     select {
       text-align: center;
@@ -455,7 +487,7 @@ canvas {
 .about {
   @extend .thin-line-border, .transparent-blur-background;
 
-  padding: 2em;
+  padding: 0.5em 2em 1em 2em;
   height: 100%;
   display: flex;
   flex-direction: column;

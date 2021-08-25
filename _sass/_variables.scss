@@ -60,6 +60,12 @@ $base-font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   }
 }
 
+@mixin half {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
 .dotted-background {
   background-image: radial-gradient($neutralLighter 0.5px, transparent 0);
   background-size: 20px 19px;
